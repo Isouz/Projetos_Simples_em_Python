@@ -21,6 +21,4 @@ while True:
         cotacao = pegar_cotacoes(codigo_cotacao)
         janela["texto_cotacao"].update(f'A cotação de {codigo_cotacao} é de R${cotacao}')
 
-
-
 janela.close()
