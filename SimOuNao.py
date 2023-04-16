@@ -15,11 +15,8 @@ while True:
     print(linha())
     print('\33[36mAnalisando...\033[m')
     sleep(1)
-    if pergunta == 'CERTEZA?':
-        print('Claro que', end=' ')
     print(opc[resp])
-    
-        
+
     while True:
         print(linha())
         continua = str(input('\033[36mMais uma pergunta? [S/N] \033[m')).upper()[0]

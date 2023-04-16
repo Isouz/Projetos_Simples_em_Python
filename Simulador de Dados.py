@@ -28,7 +28,7 @@ while True:
     while True:
         try:
             linha()
-            print('\033[32	m')
+            print('\033[32m')
             print('Escolha o tipo de dado: ')
             print('[1] Dado de 6 lados')
             print('[2] Dado de 12 lados')
