@@ -78,7 +78,7 @@ def repeat():
     """
     -> Teste de repetição. 
     :returns: Verdadeiro para repetir ou 
-    Falso para retornar ao menu principal
+    Falso para retornar ao menu principal.
     """
     while True:
         opc = test('\033[32mDeseja repetir? \n[1] Sim \n[2] Não \n\033[mOpção: ')
@@ -90,3 +90,6 @@ def repeat():
             print('\033[31mOpção inválida!\033[m')
             print()
         
+
+#Desenvolvido por Igor Souza.
+#GitHub - https://github.com/Isouz

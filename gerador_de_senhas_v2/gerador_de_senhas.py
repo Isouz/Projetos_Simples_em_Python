@@ -37,4 +37,5 @@ while True:
         print()
 
 
-#docstrings
+#Desenvolvido por Igor Souza.
+#GitHub - https://github.com/Isouz
