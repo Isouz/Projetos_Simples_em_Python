@@ -1,8 +1,11 @@
-# Forca
 from random import randint
-from os import system
-from time import sleep
+import os
 
+def clear():
+    if os.name == 'nt':   # Limpar o terminal no Windows
+        os.system('cls')
+    else:                 # Limpar o terminal em sistemas Unix
+        os.system('clear')
 
 def target():
     words = [
@@ -23,8 +26,7 @@ def target():
         'roupa', 'telefone', 'foguete', 'arquiteto',
         'produtivo', 'amigo', 'regra', 'sapateiro',
         'perna', 'raspador', 'porta', 'esquerda',
-        'banheiro', 'bilhete', 'tenista', 'testar',
-    ]
+        'banheiro', 'bilhete', 'tenista', 'testar',]
     pos = randint(0, len(words) - 1)
     return words[pos]
 
@@ -115,58 +117,3 @@ ________""")
 | / \\
 |
 ________""")
-
-
-life = 6
-word = target()
-tried = ''
-wrong = []
-
-# cores do terminal
-red = '\033[31m'
-gre = '\033[32m'
-yel = '\033[33m'
-cl = '\033[m'
-
-system('clear')
-
-for element in word:
-    tried += '_'
-
-while True:
-    info(life, wrong, tried)
-    if life == 0:
-        print()
-        print(f'{red}Você perdeu! a palavra era {cl}{word}.')
-        break
-    if tried == word:
-        print(gre, 'Parabens! Você venceu.', cl)
-        break
-    print()
-    letter = str(input('Digite uma letra: ').lower().strip())
-
-    if len(letter) > 1:
-        print()
-        print(yel, 'Digite uma letra por vez', cl)
-        sleep(1)
-        system('clear')
-
-    elif letter in word:
-        system('clear')
-        for l in range(len(word)):
-            if word[l] == letter:
-                tried = tried[:l] + word[l] + tried[l + 1:]
-            else:
-                pass
-    elif letter in wrong or letter in tried:
-        print(yel, 'Você já digitou essa letra', cl)
-        print()
-        sleep(1)
-        system('clear')
-    else:
-        system('clear')
-        wrong.append(letter)
-        life -= 1
-
-# modularizacao
-# docstrings
