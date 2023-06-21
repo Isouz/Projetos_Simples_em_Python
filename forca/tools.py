@@ -1,11 +1,13 @@
 from random import randint
 import os
 
+
 def clear():
     if os.name == 'nt':   # Limpar o terminal no Windows
         os.system('cls')
     else:                 # Limpar o terminal em sistemas Unix
         os.system('clear')
+
 
 def target():
     words = [
@@ -117,3 +119,7 @@ ________""")
 | / \\
 |
 ________""")
+
+
+#Desenvolvido por Igor Souza.
+#GitHub - https://github.com/Isouz

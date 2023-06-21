@@ -53,3 +53,7 @@ while True:
         clear()
         wrong.append(letter)
         life -= 1
+
+
+#Desenvolvido por Igor Souza.
+#GitHub - https://github.com/Isouz
