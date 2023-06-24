@@ -28,7 +28,7 @@ while True:
     if tried == word:
         print(gre, 'Parabens! Você venceu.', cl)
         break
-    print()
+    print(""*2, "")
     letter = str(input('Digite uma letra: ').lower().strip())
 
     if len(letter) > 1:

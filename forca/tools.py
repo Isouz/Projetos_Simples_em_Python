@@ -42,9 +42,9 @@ def show(text):
 
 def info(life, wrong, tried):
     body(life)
-    print()
+    print("" * 2, "")
     print(wrong)
-    print()
+    print("" * 2, "")
     show(tried)
 
 
