@@ -110,4 +110,5 @@ Classe: \033[m"""))
         print('\033[1;31mDigite um número inteiro\033[m')
  
 
-
+#Desenvolvido por Igor Souza.
+#GitHub - https://github.com/Isouz
