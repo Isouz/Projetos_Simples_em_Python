@@ -1,24 +1,18 @@
-from pytube import YouTube
+from pytubefix import YouTube
+from pytubefix.cli import on_progress
 
-def baixar(link):
-    try:
-        yt = YouTube(link)
-        stream = yt.streams.filter(progressive=True, file_extension="mp4").order_by('resolution').desc().first()
-        if stream:
-            stream.download()
-            print('Concluído')
-        else:
-            print('Não foi possível encontrar uma stream adequada para download.')
-    except Exception as e:
-        print(f"Ocorreu um erro: {e}")
+url = input('Link: ')
 
-link = input('Link: ')
-baixar(link)
+yt = YouTube(url, on_progress_callback=on_progress)
+print(yt.title)
 
+ys = yt.streams.get_highest_resolution()
+ys.download()
+
+print('Concluido!')
+
+# Instale o pytubefix através do comando: pip install pytubefix
 # Obs: O video estará na mesma pasta do arquivo (baixar_videos_youtube.py) após o download.
-
-
-# Use o comando 'pip install pytube' no terminal para instalar a biblioteca.
 
 # Desenvolvido por Igor Souza.
 # GitHub - https://github.com/Isouz
