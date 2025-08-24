@@ -149,3 +149,5 @@ while stop_match == False:
     else:
         current_player = 'X'            
            
+
+# Developed by Igor Souza - GitHub: github.com/isouz
