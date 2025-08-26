@@ -49,12 +49,12 @@ def victory_animation(player):
     for num in range(3):
         clear()
         print_board(board)
-        print(f"{verde}--- Player {player} won! ---{limpar_cor}")
+        print(f"{green}--- Player {player} won! ---{clear_color}")
         sleep(0.5)
         clear()
         print_board(board)
         sleep(0.5)
-    print(f"{verde}--- Player {player} won! ---")
+    print(f"{green}--- Player {player} won! ---")
     print(f'''
   ._==_==_=_. 
 .-\:       /-. 
@@ -65,7 +65,7 @@ def victory_animation(player):
       ) ( 
     _.' '._ 
    `"""""""` 
-    {limpar_cor}''')
+    {clear_color}''')
  
     
 def check_victory(board, player):
@@ -101,20 +101,20 @@ def draw_animation(board, player):
         clear()
         print_board(board)
         sleep(0.5)
-        print(f"""{amarelo}
+        print(f"""{yellow}
  ____                     
 |  _ \ _ __ __ ___      __
 | | | | '__/ _` \ \ /\ / /
 | |_| | | | (_| |\ V  V / 
 |____/|_|  \__,_| \_/\_/  
-        {limpar_cor}""")
+        {clear_color}""")
         sleep(0.5)
     
     
 # cores
-verde = '\033[32m'
-amarelo = '\033[33m'
-limpar_cor = '\033[m'
+green = '\033[32m'
+yellow = '\033[33m'
+clear_color = '\033[m'
 
 stop_match = False   
 current_player = 'X'  
@@ -130,7 +130,7 @@ while stop_match == False:
     print('Type the position to play:')
     print_board(ex_board)
     
-    print(f'{amarelo}>> Player: {limpar_cor}{current_player}')
+    print(f'{yellow}>> Player: {clear_color}{current_player}')
     print_board(board)
     
     if ' ' not in board:
